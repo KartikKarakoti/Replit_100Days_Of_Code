@@ -1,0 +1,20 @@
+# created a file called high.score and stored some high scores in it.
+import os, time
+
+f = open ("high.score", "r")
+scores = f.read().split("\n")
+f.close()
+
+highscore = 0
+name = None
+
+for rows in scores:
+  data = rows.split()
+  print(data)
+  
+if data != []:
+  if int(data[1]) > highscore:
+    highscore = int(data[1])
+    0name = data[0]
+
+print("The winner is", name, "with", highscore)
