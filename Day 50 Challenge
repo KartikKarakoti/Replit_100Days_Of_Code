@@ -1,0 +1,27 @@
+#Day 50! Boy, you are smashing this 100 days! 🎊 To celebrate, here's a project for you.
+import os, time
+
+def add():
+  os.system("clear")
+  idea = input("idea > ")
+  f = open("my.ideas", "a+")
+  f.write(f"{idea}\n")
+  f.close()
+
+def show():
+  os.system("clear")
+  f = open("my.ideas", "r")
+  ideas = f.read().split("\n")
+  f.close()
+  ideas.remove("")
+  idea = random.choice(ideas)
+  print(idea)
+  time.sleep(2)
+  
+while True:
+  print("Idea Storage")
+  menu = input("1: Add idea\n2: showa rendom idea\n>")
+  if menu == "1":
+    add()
+  else:
+    view()
