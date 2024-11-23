@@ -2,3 +2,15 @@ import coolSubroutines as cs
 
 cs.newPrint("red")
 print("This should be red")
+
+
+def newPrint(colour):
+  if colour=="red":
+    print("\033[31m", sep="", end="")
+  elif colour=="green":
+    print("\033[32m", sep="", end="")
+  elif colour=="blue":
+    print("\033[34m", sep="", end="")
+  else:
+    print("\033[0m", sep="", end="")
+    
