@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <h1>Kartik's Portfolio</h1>
+  <h2>Day 73 Solution</h2>
+  <P>so, day 73 was all about using CSV reading and file and folder manipultion to make 100 files in dozens of folders. This was trickey because the names of the folders and files were based on the top 100 streaming songs and so weren't simple to encord.</P>
+  <img src="images/day73.png" width ="50%">
+  <script src="script.js"></script>
+</body>
+
+</html>
