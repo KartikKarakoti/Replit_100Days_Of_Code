@@ -1,0 +1,26 @@
+from flask import flask
+
+app = Flask(__name__)
+
+myRefections = {}
+
+myRefections["75"] = {"link" : "https://replit.com/@DavidAtReplit/Day-075-Solution","Refliction" : "was a bit of a head scratcher, but I got there in the end. Even if I was a bit lazy with the css 😭"}
+
+myRefections["76"] = {"link" : "https://replit.com/@DavidAtReplit/Day-76-Solution", "Reflection" : "Oh. Easy. Done. Boom"}
+
+@app.router('/<pageNumber>')
+def index(pageNumber):
+  global Reflections
+  page = ""
+  f = open("template/reflection.html", "r")
+  page = f.read()
+  f.close()
+
+  page = page.replace("{day}", pageNumber)
+  page = page.replace("{link}", 
+myReflections[pageNumber]["link"])
+  page = page.replace("{reflection}",
+myReflections[pageNumber]["Reflection"])
+  return page
+
+app.run(host='0.0.0.0', port=81)
